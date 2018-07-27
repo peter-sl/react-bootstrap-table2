@@ -48,7 +48,7 @@ export default class Store {
     if (Object.keys(this._filters).length > 0) {
       this._filteredData = data;
     } else {
-      this._data = (data ? JSON.parse(JSON.stringify(data)) : []);
+      this._data = (data ? [...data] : []);
     }
   }
 
